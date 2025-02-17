@@ -1,0 +1,281 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary" ng-controller="ProductController as vm">
+    <a class="navbar-brand text-white" href="#">E-Commerce</a>
+
+    
+
+    <div class="ml-auto d-flex align-items-center justify-content-between" ng-if="vm.loggedInUser">
+       
+        <a href="#!/cart" class="btn btn-light mx-2">
+            <i class="fa fa-shopping-cart"></i> {{ vm.cart.length }}
+        </a>
+    
+        
+        <button class="btn btn-danger mx-2" ng-click="vm.logout()">Logout</button>
+    
+     
+        <div class="d-flex align-items-center text-white mx-2">
+            <i class="fa fa-user-circle fa-lg mr-2"></i> 
+            <span>{{ vm.loggedInUser }}</span>
+        </div>
+    </div>
+    
+   
+</nav> -->
+
+<!-- Centered Search -->
+    <!-- <form class="form-inline mx-auto" ng-submit="vm.setSearchQuery()">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search products..." aria-label="Search"
+            ng-model="vm.searchQuery">
+        <button class="btn btn-light my-2 my-sm-0" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+    </form> -->
+
+    <!-- <div class="ml-auto" ng-if="vm.loggedInUser">
+        <a href="#!/cart" class="btn btn-light">Cart {{ vm.cart.length }}</a>
+        <button class="btn btn-danger" ng-click="vm.logout()">Logout</button>
+    </div> -->
+
+    <!-- <div class="ml-auto" ng-if="vm.loggedInUser">
+        <a href="#!/cart" class="btn btn-light">
+            <i class="fa fa-shopping-cart"></i> {{ vm.cart.length }}
+        </a>
+        <button class="btn btn-danger" ng-click="vm.logout()">Logout</button>
+       
+    </div>
+    
+    <div class="d-flex align-items-center text-white mr-3" ng-if="vm.loggedInUser">
+        <i class="fa fa-user-circle fa-lg mr-2"></i> 
+        <span>{{ vm.loggedInUser }}</span>
+    </div> -->
+<!-- 
+    <nav class="navbar navbar-expand-lg custom-navbar" ng-controller="ProductController as vm">
+        <a class="navbar-brand text-white font-weight-bold" href="#">E-Commerce</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="d-flex align-items-center" ng-if="vm.loggedInUser">
+                
+               Cart Button -->
+                <!-- <a href="#!/cart" class="btn btn-light cart-btn mx-2">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span class="cart-badge">{{ vm.cart.length }}</span>
+                </a> -->
+    
+                <!-- User Profile -->
+                <!-- <div class="user-profile d-flex align-items-center text-white mx-3">
+                    <i class="fa fa-user-circle fa-lg mr-2"></i> 
+                    <span>{{ vm.loggedInUser }}</span>
+                </div> -->
+    
+                <!-- Logout Button -->
+                <!-- <button class="btn btn-outline-light logout-btn mx-2" ng-click="vm.logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+    
+    <style>
+        .custom-navbar {
+            background: linear-gradient(90deg, #1d2671, #c33764);
+            padding: 10px 20px;
+        }
+    
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    
+        .cart-btn {
+            position: relative;
+            border-radius: 30px;
+            padding: 8px 15px;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .cart-btn:hover {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+    
+        .cart-badge {
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            border-radius: 50%;
+            padding: 3px 8px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+    
+        .user-profile {
+            font-size: 16px;
+        }
+    
+        .logout-btn {
+            border-radius: 30px;
+            padding: 8px 15px;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .logout-btn:hover {
+            background-color: white;
+            color: #c33764;
+        }
+    
+        @media (max-width: 768px) {
+            .cart-btn, .logout-btn {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+    
+            .cart-badge {
+                font-size: 12px;
+                padding: 2px 6px;
+            }
+        }
+    </style>
+    -->
+
+
+    <nav class="navbar navbar-expand-lg custom-navbar" ng-controller="ProductController as vm">
+        <a class="navbar-brand text-white font-weight-bold" href="#!/">E-Commerce</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <!-- Left Menu Items -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!/">
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!/about">
+                        <i class="fa fa-info-circle"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#!/products">
+                        <i class="fa fa-shopping-bag"></i> Products
+                    </a>
+                </li>
+            </ul>
+    
+            <!-- Right Side (User Options) -->
+            <div class="d-flex align-items-center" ng-if="vm.loggedInUser">
+                
+                <!-- Cart Button -->
+                <a href="#!/cart" class="btn btn-light cart-btn mx-2">
+                    <i class="fa fa-shopping-cart"></i> 
+                    <span class="cart-badge">{{ vm.cart.length }}</span>
+                </a>
+    
+                <!-- User Profile -->
+                <div class="user-profile d-flex align-items-center text-white mx-3">
+                    <i class="fa fa-user-circle fa-lg mr-2"></i> 
+                    <span>{{ vm.loggedInUser }}</span>
+                </div>
+    
+                <!-- Logout Button -->
+                <button class="btn btn-outline-light logout-btn mx-2" ng-click="vm.logout()">Logout</button>
+            </div>
+    
+            <!-- If user is NOT logged in -->
+            <div class="ml-auto" ng-if="!vm.loggedInUser">
+                <a href="#!/login" class="btn btn-outline-light login-btn"> 
+                    <i class="fa fa-sign-in"></i> Login 
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <style>
+        .custom-navbar {
+            background: linear-gradient(90deg, #1d2671, #c33764);
+            padding: 10px 20px;
+        }
+    
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    
+        .nav-link {
+            font-size: 16px;
+            margin-right: 15px;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .nav-link i {
+            margin-right: 5px;
+        }
+    
+        .nav-link:hover {
+            color: #ffdd57 !important;
+        }
+    
+        .cart-btn {
+            position: relative;
+            border-radius: 30px;
+            padding: 8px 15px;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .cart-btn:hover {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+    
+        .cart-badge {
+            background-color: red;
+            color: white;
+            font-size: 14px;
+            border-radius: 50%;
+            padding: 3px 8px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+    
+        .user-profile {
+            font-size: 16px;
+        }
+    
+        .logout-btn, .login-btn {
+            border-radius: 30px;
+            padding: 8px 15px;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .logout-btn:hover, .login-btn:hover {
+            background-color: white;
+            color: #c33764;
+        }
+    
+        @media (max-width: 768px) {
+            .nav-link {
+                text-align: center;
+                padding: 10px 0;
+            }
+    
+            .cart-btn, .logout-btn, .login-btn {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+    
+            .cart-badge {
+                font-size: 12px;
+                padding: 2px 6px;
+            }
+        }
+    </style>
+    

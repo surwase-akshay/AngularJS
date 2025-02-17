@@ -1,0 +1,226 @@
+<!-- <div class="register-container" ng-controller="AuthController as vm">
+    <form ng-submit="vm.register()">
+        <div class="register-content">
+            <!-- Left Section -->
+            <!-- <div class="register-left">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="input-field" ng-model="vm.user.name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="input-field" ng-model="vm.user.email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="input-field" ng-model="vm.user.password" required>
+                </div>
+            </div> -->
+
+            <!-- Right Section -->
+            <!-- <div class="register-right">
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" class="input-field" ng-model="vm.user.mobile" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="input-field" ng-model="vm.user.address" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" class="input-field" ng-model="vm.user.country" required>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="register-bottom">
+            <button type="submit" class="register-btn">Register</button>
+            <p class="error-message-register">{{ vm.message }}</p>
+            <p class="login-link">Already have an account? <a href="#!/login">Login</a></p>
+        </div>
+    </form>
+</div>  -->
+
+
+<div class="register-container" ng-controller="AuthController as vm">
+    <form ng-submit="vm.register()">
+        <div class="register-content">
+            <!-- Left Section -->
+            <div class="register-left">
+                <h2>Sign Up</h2>
+                <p>Create an account to enjoy all features and personalized recommendations.</p>
+            </div>
+
+            <!-- Right Section -->
+            <div class="register-right">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="input-field" ng-model="vm.user.name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="input-field" ng-model="vm.user.email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="input-field" ng-model="vm.user.password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" id="mobile" class="input-field" ng-model="vm.user.mobile" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" class="input-field" ng-model="vm.user.address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" class="input-field" ng-model="vm.user.country" required>
+                </div>
+
+                <div class="register-bottom">
+                    <button type="submit" class="register-btn">Create Account</button>
+                    <p class="error-message-register">{{ vm.message }}</p>
+                    <p class="login-link">Already have an account? <a href="#!/login">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f7f7f7;
+    }
+
+    .register-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 1200px;
+    }
+
+    .register-left {
+        flex: 1;
+        padding-right: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .register-left h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .register-left p {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    .register-right {
+        flex: 1;
+        padding-left: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #333;
+        display: block;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-top: 5px;
+        transition: border-color 0.3s ease;
+    }
+
+    .input-field:focus {
+        border-color: #1d2671;
+        outline: none;
+    }
+
+    .register-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2rem;
+        background: #1d2671;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .register-btn:hover {
+        background: #c33764;
+    }
+
+    .error-message-register {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .register-bottom {
+        margin-top: 20px;
+    }
+
+    .login-link {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: #333;
+    }
+
+    .login-link a {
+        color: #1d2671;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .login-link a:hover {
+        color: #c33764;
+    }
+
+    @media (max-width: 768px) {
+        .register-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .register-left, .register-right {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+</style>
+
